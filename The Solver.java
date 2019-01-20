@@ -168,13 +168,14 @@ class Equations
         double[] b=new double[n];
         double[][] AU=new double[n][n+1];
         int i,j;
-        System.out.println("You must enter a Non-Singular Equation Matrix A, i.e., |A|!=0.");
+        System.out.println("You must enter a Non-Singular Equation Matrix A with dimensions n*n.");
         for(i=0;i<n;i++)
         {
             for(j=0;j<n;j++)
             {
-                System.out.println("Enter the element in "+i+"(th) row and "+j+"(th) column:  ");
+                System.out.print("Enter the element in "+i+"(th) row and "+j+"(th) column:  ");
                 A[i][j]=in.nextDouble();
+                System.out.println();
             }
         }
         boolean c=eq.isSingular(A);
@@ -216,6 +217,6 @@ class Equations
             eq.Solutions(A,b);
         }
         else if(c)
-            System.out.println("The entered Equation Matrix is singular. The equation system is dependent and\nthus has no solutions or infinite solutions."); 
+            System.out.println("The entered Equation Matrix is singular. The equation system is dependent and thus has no solutions or an infinite number of solutions."); 
     }
 }
