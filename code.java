@@ -214,6 +214,6 @@ class Equations
             eq.Solutions(A,b);
         }
         else if(c)
-            System.out.println("The entered Equation Matrix is singular. Try Again."); 
+            System.out.println("The entered Equation Matrix is singular. The equation system is dependent and\nthus has no solutions or infinite solutions."); 
     }
 }
