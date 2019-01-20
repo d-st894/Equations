@@ -4,7 +4,9 @@
 * Triangular Matrix, which is significantly easier to work with.
 * After converting to a triangular Matrix, it uses some basic algebra to obtain the values of the varibles in this simplified system and
 * prints them.
-* In case the entered matrix is singular, the appropriate message will be displayed.
+* The thing to note that it can solve a system, where n can have any reasonable value, with a time complexity of O(n^3), withput having to
+* to actually compute the inverse of the equation matrix.
+* In case the entered matrix is singular, an appropriate message is displayed.
 */
 import java.util.Scanner;
 class Equations
