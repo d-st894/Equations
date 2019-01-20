@@ -43,7 +43,7 @@ class Equations
             A[n][i]=A[n][i]-x*A[m][i];
         return (A);
     }
-    double[][] CheckChange(double[][] A, int m, int n)
+    double[][] CheckNChange(double[][] A, int m, int n)
     {                                                 
         /**
          * Method to check that all the points on the main diagonal are non-zero. If they are not, then it uses Row Exchanges to make
@@ -121,7 +121,7 @@ class Equations
         for(i=0;i<n;i++)
         {
             if(A[i][i]==0)
-                A=CheckChange(A,i,i);
+                A=CheckNChange(A,i,i);
             for(j=i+1;j<n;j++)
             {
                 double m=A[j][i]/A[i][i];
