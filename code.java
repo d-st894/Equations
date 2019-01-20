@@ -14,10 +14,10 @@ class Equations
         
         /**
          * Method to exchange the m(th)and n(th) rows of a matrix and then return the altered matrix. 
-         * @params double[][] A : The Matrix whose rows are to be altered.
-         * @params int m : The row number that is to be moved.
-         * @params int n : The row number that is to replace the above row and whose place the above row will take.
-         * @returns double[][] A :The input matrix after the operation.
+         * @param double[][] A : The Matrix whose rows are to be altered.
+         * @param int m : The row number that is to be moved.
+         * @param int n : The row number that is to replace the above row and whose place the above row will take.
+         * @return double[][] A :The input matrix after the operation.
          */
         double a=0;
         for(int i=0;i<A[0].length;i++)
@@ -33,11 +33,11 @@ class Equations
         /**
          * Method to subtract a multiple of one row of a matrix from one row of a matrix from another row of the same matrix and then
          * the resulting matrix.
-         * @params double[][] A : The matrix whose rows are to be subtracted from one another.
-         * @params int x : The multiplying factor of the row to be subtracted.
-         * @params int m : The row whose multiple is to be subtracted.
-         * @params int n : The row that is to be subtracted from.
-         * @returns double[][] A : The original matrix after performing the desired subtraction.
+         * @param double[][] A : The matrix whose rows are to be subtracted from one another.
+         * @param int x : The multiplying factor of the row to be subtracted.
+         * @param int m : The row whose multiple is to be subtracted.
+         * @param int n : The row that is to be subtracted from.
+         * @return double[][] A : The original matrix after performing the desired subtraction.
          */
         for(int i=0;i<A[0].length;i++)
             A[n][i]=A[n][i]-x*A[m][i];
@@ -48,10 +48,10 @@ class Equations
         /**
          * Method to check that all the points on the main diagonal are non-zero. If they are not, then it uses Row Exchanges to make
          * every entry of the form A[i][i] non-zero.
-         * @params double[][] A : The matrix whose main diagonal points are to be made non-zero.
-         * @params int m : The row number of the element that is to checked and possibly exchanged.
-         * @params int n : The coulumn number of the element that is to checked and possibly exchanged.
-         * @returns double[][] A : The original matrix after making the main diagonal non zero.
+         * @param double[][] A : The matrix whose main diagonal points are to be made non-zero.
+         * @param int m : The row number of the element that is to checked and possibly exchanged.
+         * @param int n : The coulumn number of the element that is to checked and possibly exchanged.
+         * @return double[][] A : The original matrix after making the main diagonal non zero.
          */
         if(A[m][n]!=0)
         {}
@@ -73,8 +73,8 @@ class Equations
     {
         /**
          * Recursive Method t find the determintn of a square matrix.
-         * @params double[][] A : The matrix whose determinan is to be found.
-         * @params double det : The determinant of the given square matrix.
+         * @param double[][] A : The matrix whose determinan is to be found.
+         * @param double det : The determinant of the given square matrix.
          */
         double temp[][];
         double det=0.0;
@@ -102,8 +102,8 @@ class Equations
     {
         /**
          * Method to check if the determinant of a matrix is zero, i.e., if the matrix s singular or not.
-         * @params double[][] A : The matrix whose singularity is to checked.
-         * @returns boolean c : It is ture if A is singular, false otherwise.
+         * @param double[][] A : The matrix whose singularity is to checked.
+         * @return boolean c : It is ture if A is singular, false otherwise.
          */
         if(Determinant(A)==0)
             return true;
@@ -113,8 +113,8 @@ class Equations
     {
         /**
          * Method to perform Gaussian Elimination on the Equation Matrix to convert it into an Upper-Triangular Matrix.
-         * @params double[][] A : The matrix who is to be made Upper-Triangular.
-         * @returns double[][] A : The matrix after Gaussian Elimination. 
+         * @param double[][] A : The matrix who is to be made Upper-Triangular.
+         * @return double[][] A : The matrix after Gaussian Elimination. 
          */    
         int n=A.length;
         int i,j;
@@ -134,8 +134,8 @@ class Equations
     {
         /**
          * Method to finally calculate the solutions and then print them.
-         * @params double[][] A : The equation matrix after Gaussian Elimination.
-         * @params double[] b : The result vector after alteration.
+         * @param double[][] A : The equation matrix after Gaussian Elimination.
+         * @param double[] b : The result vector after alteration.
          */
         int n=A.length;
         int i,j;
