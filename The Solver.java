@@ -61,14 +61,12 @@ class Equations
         {
             int i;
             for(i=m;i<A.length;i++)
-            {
                 if(A[i][n]!=0)
                 {
                     A=RExc(A,m,i);
                     break;
                 }
-            }
-        }
+        }  
         return(A);
     }
     double Determinant(double[][] A)
@@ -170,14 +168,12 @@ class Equations
         int i,j;
         System.out.println("You must enter a Non-Singular Equation Matrix A with dimensions n*n.");
         for(i=0;i<n;i++)
-        {
             for(j=0;j<n;j++)
             {
                 System.out.print("Enter the element in "+i+"(th) row and "+j+"(th) column:  ");
                 A[i][j]=in.nextDouble();
                 System.out.println();
             }
-        }
         boolean c=eq.isSingular(A);
         if(!c)
         {
@@ -200,18 +196,14 @@ class Equations
                 System.out.print(b[i]+"  ");
             System.out.println();
             for(i=0;i<n;i++)
-            {
                 for(j=0;j<n;j++)
                     AU[i][j]=A[i][j];
-            }
             for(i=0;i<n;i++)
                 AU[i][n]=b[i];
             AU=eq.Elimination(AU);
             for(i=0;i<n;i++)
-            {
                 for(j=0;j<n;j++)
                     A[i][j]=AU[i][j];
-            }
             for(i=0;i<n;i++)
                 b[i]=AU[i][n];
             eq.Solutions(A,b);
