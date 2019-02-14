@@ -217,6 +217,6 @@ class Equations
             eq.Solutions(A,b);
         }
         else if(c)
-            System.out.println("The entered Equation Matrix is singular. The equation system is dependent and thus has no solutions or an infinite number of solutions."); 
+            System.out.println("The entered Equation Matrix is singular. The equation system is dependent and thus has no unique solutions."); 
     }
 }
